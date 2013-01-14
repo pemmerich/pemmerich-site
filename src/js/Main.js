@@ -2,7 +2,7 @@ var thumb_scroll;
 var thumbnails=[];
 
 document.write("<script src='js/Thumbnail.js' type='text/javascript' charset='UTF-8'></script>");
-document.write("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
+
 
 $(document).ready
 (
@@ -43,12 +43,23 @@ function xmlParser(xml) {
 function init()
 {
 	
-	//thumbnails=[new Thumbnail("thumb 1",1), new Thumbnail("thumb 2",2), new Thumbnail("thumb 3",3)];
-	
+	$('#thumb_scroll_container').append('<div class="scroller"><ul id="list"></ul></div>');
+	 
 	$(thumbnails).each(function (i,elem) {
-		  console.log(" build thumb "+elem.title);
-		
-	    
+		  console.log(" build thumb "+i+" "+elem.title);
+		  $('#list').append('<li><a href="'+elem.full_file+'" class="html5lightbox" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></li>');
+		  var thumbPos = 400*i;
+		 
 	  });
 	
+	var thumbWidth = $('#thumb_scroll_container > .scroller li').css('width').replace("px","");
+	var thumbMargin = $('#thumb_scroll_container > .scroller li').css('margin-right').replace("px","");
+	var scrollWidth = $(thumbnails).length * (Number(thumbWidth) + (thumbMargin*2) );
+	 $('#thumb_scroll_container > .scroller').css("width",scrollWidth);
+	 console.log("scroller width = "+scrollWidth);
+	 
+	thumb_scroll = new iScroll("thumb_scroll_container",{useTransform:true, vScrollbar: false, hideScrollbar: true});
+	
+	$('body').append("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
+
 }

@@ -50,9 +50,10 @@ hr
 	margin:20px 0px 0px 0px;
 }
 
-#scroll-container
+#thumb_scroll_container
 {
 	position:absolute;
+	overflow:auto;
 	width:100%;
 	height:400px;
 	top:50%;
@@ -61,12 +62,36 @@ hr
 	
 }
 
-.thumb-item
+.scroller 
 {
-	width:400px;
+	width:0px;
+	min-width:100%;
+	height:100%;
+	padding:0;
+}
+
+.scroller ul 
+{
+	position:absolute;
+	list-style:none;
+	display:block;
+	width:100%;
 	height:350px;
 	top:50%;
-	margin:-187.5px 0px 0px 0px;
-	background:#CCCCCC;
-	
+	padding:0;
+	margin:-175px 0px 0px 0px;
+	text-align:left;
 }
+
+.scroller li 
+{
+	display:block;
+	vertical-align:middle;
+	float:left;
+	margin:0px 10px 0px 10px;
+	width:400px;
+	height:100%;
+	background-color:#cccccc;
+	font-size:14px;
+}
+

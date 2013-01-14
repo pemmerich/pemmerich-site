@@ -148,6 +148,7 @@
  * @param jsFolder
  */
 function loadHtml5LightBox(jsFolder) {
+	console.log("load html 5 light box");
 	
 	/**
 	 * jQuery plugin
