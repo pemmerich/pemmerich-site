@@ -1,0 +1,19 @@
+<content>
+	<thumbs>
+        <thumb>
+            <title>Test Thumb</title>
+        	<filename>images/full/test.jpg</filename>
+            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+        </thumb>
+        <thumb>
+            <title>Test Thumb 2</title>
+        	<filename>images/full/test.jpg</filename>
+            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+        </thumb>
+        <thumb>
+            <title>Test Thumb 3</title>
+        	<filename>images/full/test.jpg</filename>
+            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+        </thumb>
+    </thumbs>
+</content>
