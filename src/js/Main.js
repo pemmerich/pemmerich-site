@@ -42,12 +42,14 @@ function xmlParser(xml) {
 
 function init()
 {
+	var self=this;
 	
-	$('#thumb_scroll_container').append('<div class="scroller"><ul id="list"></ul></div>');
+	$('#thumb_scroll_container').append('<div class="scroller"><ul class="list"></ul></div>');
 	 
+	
 	$(thumbnails).each(function (i,elem) {
-		  console.log(" build thumb "+i+" "+elem.title);
-		  $('#list').append('<li><a href="'+elem.full_file+'" class="html5lightbox" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></li>');
+		  //console.log(" build thumb "+i+" "+elem.title);
+		  $('#thumb_scroll_container > .scroller > .list').append('<li><a href="'+elem.full_file+'" id="'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></li>');
 		  var thumbPos = 400*i;
 		 
 	  });
@@ -58,8 +60,27 @@ function init()
 	 $('#thumb_scroll_container > .scroller').css("width",scrollWidth);
 	 console.log("scroller width = "+scrollWidth);
 	 
-	thumb_scroll = new iScroll("thumb_scroll_container",{useTransform:true, vScrollbar: false, hideScrollbar: true});
+	thumb_scroll = new iScroll("thumb_scroll_container",{useTransform:true, vScrollbar: false, hideScrollbar: true, onScrollMove: function(){ $('a').addClass('scrolling'); },
+		onScrollEnd: function(e){ setTimeout(canClickNow, 500); function canClickNow(){ $('a').removeClass('scrolling'); } }});
 	
-	$('body').append("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
 
+	$('body').append("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
+	
+	console.log("light box = "+html5Lightbox);
+	
+	$('#thumb_scroll_container > .scroller li a').click(function(e) {
+		
+		e.stopPropagation();
+    	e.preventDefault();
+    	
+    	console.log("a click lightbox = "+html5Lightbox);
+    	
+    	
+    	if(!$(this).hasClass('scrolling')){                  
+	    	html5Lightbox.showLightbox(0, $(this).attr('href'), $(this).attr('title'));
+	    }
+	}
+	);
+	
+	
 }

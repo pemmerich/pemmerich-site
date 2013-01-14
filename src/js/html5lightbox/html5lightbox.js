@@ -436,6 +436,8 @@ function loadHtml5LightBox(jsFolder) {
 			*/
 			inst.clickHandler = function()
 			{
+			
+			
 				if (inst.elemArray.length <= 0)
 					return true;
 				
@@ -1138,6 +1140,7 @@ function loadHtml5LightBox(jsFolder) {
 			 */
 			inst.showItem = function(href)
 			{
+				console.log("show item");
 				if (inst.elemArray.length <= 0)
 					return true;
 				
