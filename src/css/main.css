@@ -16,6 +16,12 @@
 }
 */
 
+a, a:link, a:visited, a:hover, a:active   
+{
+    color:#95a7bc;
+    text-decoration: underline;
+}
+
 body
 {
 	
