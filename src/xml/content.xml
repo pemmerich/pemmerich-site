@@ -1,7 +1,7 @@
 <content>
 	<thumbs>
         <thumb>
-            <title>Test Thumb</title>
+            <title><![CDATA[Test Thumb <a href='http://www.cnn.com'>Test</a>]]></title>
         	<filename>images/full/test.jpg</filename>
             <thumbnail>images/thumbs/test.jpg</thumbnail>   
         </thumb>

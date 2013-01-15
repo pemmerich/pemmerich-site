@@ -48,18 +48,19 @@ function init()
 	$('#thumb_scroll_container > .scroller').append('<div id="reflection_fade"></div>');
 	 
 	
-	 $('#thumb_scroll_container > .scroller > .list').append('<li><img src="images/instructions.png"></li>');
+	 $('#thumb_scroll_container > .scroller > .list').append('<li><img class="no_border" src="images/instructions.png"></li>');
 	 
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
-		  $('#thumb_scroll_container > .scroller > .list').append('<li><a href="'+elem.full_file+'" id="'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"><img src="'+elem.thumb_file+'" class="flip-vertical "></a></li>');
-		  var thumbPos = 400*i;
+		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container"><a href="'+elem.full_file+'" id="'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"><img src="'+elem.thumb_file+'" class="flip-vertical "></a></div></li>');
+
 		 
 	  });
 	
 	var thumbWidth = $('#thumb_scroll_container > .scroller li').css('width').replace("px","");
+	var thumbBorder = $('#thumb_scroll_container > .scroller li img').css('border-width').replace("px","");
 	var thumbMargin = $('#thumb_scroll_container > .scroller li').css('margin-right').replace("px","");
-	var scrollWidth = ($(thumbnails).length+1) * (Number(thumbWidth) + (thumbMargin*2) );
+	var scrollWidth = ($(thumbnails).length+1) * (Number(thumbWidth) + (thumbMargin*2) + (thumbBorder*2) );
 	 $('#thumb_scroll_container > .scroller').css("width",scrollWidth);
 	 console.log("scroller width = "+scrollWidth);
 	 

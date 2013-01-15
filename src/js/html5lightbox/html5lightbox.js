@@ -184,7 +184,7 @@ function loadHtml5LightBox(jsFolder) {
 				skinfolder:				"skins/default/",
 				
 				// title
-				titlecss:				"{color:#333333; font-size:16px; font-family:Armata,sans-serif,Arial; overflow:hidden; white-space:nowrap;}",
+				titlecss:				"{color:#95a7bc;; font-size:16px; font-family:Helvetica, Arial, sans-serif; overflow:hidden; white-space:nowrap;}",
 				
 				// error
 				errorwidth:				280,
