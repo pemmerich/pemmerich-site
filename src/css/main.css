@@ -32,22 +32,34 @@ body
 	background-attachment:fixed;
 	background-size:cover;
 	*/
-	background:#ffffff;
+	background:#cccccc;
 }
 
 #shadow
 {
-	position:fixed;
-	top:0px;
-	left:0px;
+	
+	position:absolute;
+	overflow:auto;
 	width:100%;
-	height:100%;
-	margin:0;
-	padding:0;
-	background:#5b5a5a;
-	background-image:url(../images/fade.jpg);
-	background-position:center;
-	background-repeat:no-repeat;
+	height:846px;
+	top:50%;
+	margin:-423px 0px 0px 0px;
+	background:#ffffff;
+	background-image:url(../images/outer_shadow.png);
+	background-repeat:x-repeat;
+
+}
+
+#logo
+{
+	
+	position:absolute;
+	width:550px;
+	height:150px;
+	top:20px;
+	left:0px;
+	background-image:url(../images/logo.png);
+	background-repeat:x-repeat;
 
 }
 
@@ -72,11 +84,25 @@ hr
 	position:absolute;
 	overflow:auto;
 	width:100%;
-	height:600px;
+	height:500px;
 	top:50%;
-	margin:-300px 0px 0px 0px;
-	/*background:#6699CC;*/
+	margin:-250px 0px 0px 0px;
+	background:#6699CC;
+	background-image:url(../images/inner_shadow.png);
+	background-repeat:x-repeat;
 	
+}
+
+#reflection_fade
+{
+	position:absolute;
+	overflow:auto;
+	width:100%;
+	height:125px;
+	bottom:0px;
+
+	background-image:url(../images/reflection_fade.png);
+	background-repeat:x-repeat;
 }
 
 .scroller 
@@ -84,8 +110,10 @@ hr
 	width:0px;
 	min-width:100%;
 	height:100%;
+	/*
 	padding-left:50%;
 	margin-left:-200px;
+	*/
 }
 
 .scroller ul 
@@ -97,7 +125,7 @@ hr
 	height:350px;
 	top:50%;
 	padding:0;
-	margin:-175px 0px 0px 0px;
+	margin:-225px 0px 0px 0px;
 	text-align:left;
 }
 
@@ -110,7 +138,16 @@ hr
 	margin:0px 10px 0px 10px;
 	width:400px;
 	height:100%;
-	background-color:#cccccc;
+
 	font-size:14px;
 }
 
+.flip-vertical 
+{
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -ms-filter: flipv; /*IE*/
+    filter: flipv; /*IE*/
+}
