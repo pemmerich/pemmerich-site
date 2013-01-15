@@ -1,214 +1,59 @@
 <content>
 	<thumbs>
+	    
         <thumb>
-            <title><![CDATA[Test Thumb <a href='http://www.cnn.com'>Test</a>]]></title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[Sunflower - Spraypaint on canvas]]></title>
+        	<filename>images/full/sunflower.jpg</filename>
+            <thumbnail>images/thumbs/sunflower.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[Bot - Illustrator]]></title>
+        	<filename>images/full/bot.jpg</filename>
+            <thumbnail>images/thumbs/bot.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[Musical Martyr - Spraypaint on canvas]]></title>
+        	<filename>images/full/lennon.jpg</filename>
+            <thumbnail>images/thumbs/lennon.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[SK8 ALL DAY - Screen print on t-shirt]]></title>
+        	<filename>images/full/sk8.jpg</filename>
+            <thumbnail>images/thumbs/sk8.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[NY MMA - Flash site, PHP admin, Logo design -<a href='http://www.ny-mma.com' target='blank'> Launch Flash Site</a>]]></title>
+        	<filename>images/full/nymma.jpg</filename>
+            <thumbnail>images/thumbs/nymma.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[XOXO - Spraypaint on canvas]]></title>
+        	<filename>images/full/heart.jpg</filename>
+            <thumbnail>images/thumbs/heart.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[Think Inside the Box - Spraypaint on canvas]]></title>
+        	<filename>images/full/box.jpg</filename>
+            <thumbnail>images/thumbs/box.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[TPC - Flash site, PHP Admin, Logo design -<a href='http://http://www.tailspawsandclaws.com' target='blank'> Launch Flash Site</a>]]></title>
+        	<filename>images/full/tpc.jpg</filename>
+            <thumbnail>images/thumbs/tpc.jpg</thumbnail>   
         </thumb>
+        
         <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
+            <title><![CDATA[Tough Love - Spraypaint on canvas]]></title>
+        	<filename>images/full/knuckles.jpg</filename>
+            <thumbnail>images/thumbs/knuckles.jpg</thumbnail>   
         </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 2</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
-        <thumb>
-            <title>Test Thumb 3</title>
-        	<filename>images/full/test.jpg</filename>
-            <thumbnail>images/thumbs/test.jpg</thumbnail>   
-        </thumb>
+        
     </thumbs>
 </content>
