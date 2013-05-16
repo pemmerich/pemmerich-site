@@ -22,6 +22,16 @@ $(document).ready
 );
 
 
+$(window).resize(function() {
+	var viewportWidth = $(window).width();
+	var viewportHeight = $(window).height();
+	console.log("Viewport Width = "+viewportWidth);
+	console.log("Viewport Height = "+viewportHeight);
+	//update survey container size
+	survey.sizeContent();
+
+});
+
 function xmlParser(xml) {
 	 var self=this;
     //$('#load').fadeOut();
