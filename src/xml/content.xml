@@ -1,6 +1,20 @@
 <content>
 	<thumbs>
-	    
+	    <thumb>
+            <title><![CDATA[Untitled - Spraypaint on canvas]]></title>
+        	<filename>images/full/colombia.jpg</filename>
+            <thumbnail>images/thumbs/colombia.jpg</thumbnail>   
+        </thumb>
+        <thumb>
+            <title><![CDATA[Love - Spraypaint on canvas]]></title>
+        	<filename>images/full/love.jpg</filename>
+            <thumbnail>images/thumbs/love.jpg</thumbnail>   
+        </thumb>
+        <thumb>
+            <title><![CDATA[Jamaica - Spraypaint on canvas]]></title>
+        	<filename>images/full/jamaica-flag.jpg</filename>
+            <thumbnail>images/thumbs/jamaica-flag.jpg</thumbnail>   
+        </thumb>
         <thumb>
             <title><![CDATA[Sunflower - Spraypaint on canvas]]></title>
         	<filename>images/full/sunflower.jpg</filename>
