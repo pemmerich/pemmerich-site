@@ -1,6 +1,16 @@
 <content>
 	<thumbs>
 	    <thumb>
+            <title><![CDATA[Lick Me - Spraypaint on canvas]]></title>
+        	<filename>images/full/lickme.jpg</filename>
+            <thumbnail>images/thumbs/lickme.png</thumbnail>   
+        </thumb>
+        <thumb>
+            <title><![CDATA[Marilyn - Spraypaint on canvas]]></title>
+        	<filename>images/full/marilyn.jpg</filename>
+            <thumbnail>images/thumbs/marilyn.png</thumbnail>   
+        </thumb>
+	    <thumb>
             <title><![CDATA[James Gandolfini has a posse - Spraypaint on canvas]]></title>
         	<filename>images/full/gandolfini.jpg</filename>
             <thumbnail>images/thumbs/gandolfini.jpg</thumbnail>   
