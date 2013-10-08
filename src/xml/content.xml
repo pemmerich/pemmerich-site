@@ -1,6 +1,11 @@
 <content>
 	<thumbs>
 	    <thumb>
+            <title><![CDATA[Skull - Spraypaint on canvas]]></title>
+        	<filename>images/full/skull.jpg</filename>
+            <thumbnail>images/thumbs/skull.png</thumbnail>   
+        </thumb>
+	    <thumb>
             <title><![CDATA[Lick Me - Spraypaint on canvas]]></title>
         	<filename>images/full/lickme.jpg</filename>
             <thumbnail>images/thumbs/lickme.png</thumbnail>   
