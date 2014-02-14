@@ -20,11 +20,15 @@
         	<filename>images/full/gandolfini.jpg</filename>
             <thumbnail>images/thumbs/gandolfini.jpg</thumbnail>   
         </thumb>
+        
+        <!--  
 	    <thumb>
             <title><![CDATA[Untitled - Spraypaint on canvas]]></title>
         	<filename>images/full/colombia.jpg</filename>
             <thumbnail>images/thumbs/colombia.jpg</thumbnail>   
         </thumb>
+        -->
+        
         <thumb>
             <title><![CDATA[Love - Spraypaint on canvas]]></title>
         	<filename>images/full/love.jpg</filename>
