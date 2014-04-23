@@ -28,7 +28,7 @@ $(window).resize(function() {
 	console.log("Viewport Width = "+viewportWidth);
 	console.log("Viewport Height = "+viewportHeight);
 	//update survey container size
-	survey.sizeContent();
+	//survey.sizeContent();
 
 });
 
@@ -55,15 +55,16 @@ function init()
 	var self=this;
 	
 	$('#thumb_scroll_container').append('<div class="scroller"><ul class="list"></ul></div>');
-	$('#thumb_scroll_container > .scroller').append('<div id="reflection_fade"></div>');
+	//$('#thumb_scroll_container > .scroller').append('<div id="reflection_fade"></div>');
 	 
 	
 	 $('#thumb_scroll_container > .scroller > .list').append('<li><img class="no_border" src="images/instructions.png"></li>');
 	 
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
-		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container"><a href="'+elem.full_file+'" id="'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"><img src="'+elem.thumb_file+'" class="flip-vertical "></a></div></li>');
-
+		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"><img src="'+elem.thumb_file+'" class="flip-vertical "></a></div></li>');
+		  var translateY = Math.floor(Math.random() * 100) - 50
+		  $('#thumb_container_'+i+' > a > img').css({"-webkit-transform":"translateY("+translateY+"px) rotateX(60deg)"});
 		 
 	  });
 	
@@ -74,9 +75,16 @@ function init()
 	 $('#thumb_scroll_container > .scroller').css("width",scrollWidth);
 	 console.log("scroller width = "+scrollWidth);
 	 
-	thumb_scroll = new iScroll("thumb_scroll_container",{useTransform:true, vScrollbar: false, hideScrollbar: true, onScrollMove: function(){ $('a').addClass('scrolling'); },
-		onScrollEnd: function(e){ setTimeout(canClickNow, 500); function canClickNow(){ $('a').removeClass('scrolling'); } }});
-	
+	thumb_scroll = new IScroll("#thumb_scroll_container",{scrollX:true, eventPassthrough:true});
+	thumb_scroll.on('scrollStart', function () {
+		$('a').addClass('scrolling');
+	});
+	thumb_scroll.on('scrollEnd', function () {
+		setTimeout(function(){
+			$('a').removeClass('scrolling');
+		},500);
+		
+	});
 
 	$('body').append("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
 	
