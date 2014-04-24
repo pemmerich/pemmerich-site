@@ -306,7 +306,9 @@ hr
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	
-	-webkit-transform: rotateX(60deg);
+	-webkit-transform:rotateX(60deg) rotateZ(35deg);
+	transform:rotateX(60deg) rotateZ(35deg);
+	
 	box-shadow: 0px 5px 10px #000000;
 }
 

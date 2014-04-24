@@ -63,8 +63,8 @@ function init()
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
 		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"><img src="'+elem.thumb_file+'" class="flip-vertical "></a></div></li>');
-		  var translateY = Math.floor(Math.random() * 100) - 50
-		  $('#thumb_container_'+i+' > a > img').css({"-webkit-transform":"translateY("+translateY+"px) rotateX(60deg)"});
+		  var translateY = Math.floor(Math.random() * 50) - 25;
+		  $('#thumb_container_'+i+' > a > img').css({"-webkit-transform":"translateY("+translateY+"px) rotateX(60deg) rotateZ(35deg)"});
 		 
 	  });
 	
