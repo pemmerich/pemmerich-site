@@ -291,10 +291,17 @@ hr
 	height:100%;
 
 	font-size:14px;
-	-webkit-perspective: 1000px; /* Chrome, Safari, Opera */
-	perspective: 1000px;
+	
+	-webkit-perspective: 10000px; 
+	perspective: 10000px;
 	 
-   
+
+}
+
+.scroller li a
+{
+	-webkit-perspective: 10000px; /* Chrome, Safari, Opera */
+	perspective: 10000px;
 }
 
 .scroller li img

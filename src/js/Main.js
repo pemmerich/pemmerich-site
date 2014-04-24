@@ -58,13 +58,14 @@ function init()
 	//$('#thumb_scroll_container > .scroller').append('<div id="reflection_fade"></div>');
 	 
 	
-	 $('#thumb_scroll_container > .scroller > .list').append('<li><img class="no_border" src="images/instructions.png"></li>');
+	
+	 $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_no_border"><a><img class="no_border" src="images/instructions.png"></div></li>');
 	 
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
-		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"><img src="'+elem.thumb_file+'" class="flip-vertical "></a></div></li>');
+		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></div></li>');
 		  var translateY = Math.floor(Math.random() * 50) - 25;
-		  $('#thumb_container_'+i+' > a > img').css({"-webkit-transform":"translateY("+translateY+"px) rotateX(60deg) rotateZ(35deg)"});
+		  $('#thumb_container_'+i+' > a > img').css({"-webkit-transform":"translateY("+translateY+"px) rotateX(60deg) rotateZ(35deg)","transform":"translateY("+translateY+"px) rotateX(60deg) rotateZ(35deg)"});
 		 
 	  });
 	
