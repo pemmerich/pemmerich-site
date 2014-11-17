@@ -54,29 +54,33 @@ function init()
 {
 	var self=this;
 	
-	$('#thumb_scroll_container').append('<div class="scroller"><ul class="list"></ul></div>');
+	//$('#thumb_scroll_container').append('<div class="scroller"><ul class="list"></ul></div>');
 	//$('#thumb_scroll_container > .scroller').append('<div id="reflection_fade"></div>');
 	 
 	
 	
-	 $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_no_border"><a><img class="no_border" src="images/instructions.png"></div></li>');
+	 /*$('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_no_border"><a><img class="no_border" src="images/instructions.png"></div></li>');*/
 	 
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
-		  $('#thumb_scroll_container > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></div></li>');
-		  var translateY = Math.floor(Math.random() * 50) - 10;
-		  $('#thumb_container_'+i+' > a > img').css({"-webkit-transform":"translateY("+translateY+"px) rotateX(60deg) rotateZ(35deg)","transform":"translateY("+translateY+"px) rotateX(60deg) rotateZ(35deg)"});
+		  $('#content > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="images/instructions.png"></a></div></li>');
+		
+		 
 		 
 	  });
 	
-	var thumbWidth = $('#thumb_scroll_container > .scroller li').css('width').replace("px","");
-	var thumbBorder = $('#thumb_scroll_container > .scroller li img').css('border-width').replace("px","");
-	var thumbMargin = $('#thumb_scroll_container > .scroller li').css('margin-right').replace("px","");
+	var thumbWidth = $('#content > .scroller li').css('width').replace("px","");
+	var thumbHeight = $('#content > .scroller li').css('height').replace("px","");
+	var thumbBorder = $('#content > .scroller li img').css('border-width').replace("px","");
+	var thumbMargin = $('#content > .scroller li').css('margin-right').replace("px","");
 	var scrollWidth = ($(thumbnails).length+1) * (Number(thumbWidth) + (thumbMargin*2) + (thumbBorder*2) );
-	 $('#thumb_scroll_container > .scroller').css("width",scrollWidth);
+	var scrollHeight = ($(thumbnails).length+1) * (Number(thumbHeight) + (thumbMargin*2) + (thumbBorder*2) );
+	 $('#content > .scroller').css("height",scrollHeight);
 	 console.log("scroller width = "+scrollWidth);
+	 console.log("scroller height = "+scrollHeight);
 	 
-	thumb_scroll = new IScroll("#thumb_scroll_container",{scrollX:true, eventPassthrough:true});
+	
+	thumb_scroll = new IScroll("#content",{mouseWheel:true,scrollbars:true});
 	thumb_scroll.on('scrollStart', function () {
 		$('a').addClass('scrolling');
 	});
@@ -91,7 +95,7 @@ function init()
 	
 	console.log("light box = "+html5Lightbox);
 	
-	$('#thumb_scroll_container > .scroller li a').click(function(e) {
+	$('#content > .scroller li a').click(function(e) {
 		
 		e.stopPropagation();
     	e.preventDefault();
