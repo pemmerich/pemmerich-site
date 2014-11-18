@@ -64,14 +64,17 @@ function init()
 	 
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
-		  $('#content > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="images/instructions.png"></a></div></li>');
+		  $('#content > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></div></li>');
 		
 		 
 		 
 	  });
 	
 	
-	setScrollerHeight();
+
+			setScrollerHeight();
+
+	
 	 
 	 
 	 
@@ -110,6 +113,7 @@ function init()
 
 function setScrollerHeight()
 {
+	console.log("set scroller height");
 	var listHeight = $('#content > .scroller > .list').innerHeight();
 	var listWidth = $('#content > .scroller > .list').innerWidth();
 	var headerHeight = $('#header').innerHeight();

@@ -27,8 +27,8 @@ a, a:link, a:visited, a:hover, a:active
 	color:#B6CDE9;
 	color:#d2d2d2;
 	color:#FFFFFF;
-	
-color:#6ab2e6;
+	color:#6ab2e6;
+	color: #b9b5b5;
 }
 
 .grey
@@ -40,6 +40,7 @@ color:#6ab2e6;
 	color:#FFFFFF;
 	color:#95A7BC;
 	color:#f2e418;
+	color: #f7f2f2;
 }
 
 body, html
@@ -118,7 +119,7 @@ body, html
 	position:relative;
 	max-width:50%;
 
-
+	margin-left: 60px;
 	text-align:left;
 	margin-bottom:0px;
 	/*background-color: red;*/
@@ -242,14 +243,17 @@ hr
 	background-repeat:x-repeat;
 	*/
 	
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top, #dfdada 1%, #f7f2f2 99%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#dfdada), color-stop(99%,#f7f2f2)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #dfdada 1%,#f7f2f2 99%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #dfdada 1%,#f7f2f2 99%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #dfdada 1%,#f7f2f2 99%); /* IE10+ */
-	background: linear-gradient(to bottom, #dfdada 1%,#f7f2f2 99%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfdada', endColorstr='#f7f2f2',GradientType=0 ); /* IE6-9 */
+
+	
+
+	background: #dfdada; /* Old browsers */
+	background: -moz-linear-gradient(top, #dfdada 1%, #f7f2f2 50%, #dfdada 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#dfdada), color-stop(50%,#f7f2f2), color-stop(99%,#dfdada)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #dfdada 1%, #f7f2f2 50%, #dfdada 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #dfdada 1%, #f7f2f2 50%, #dfdada 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #dfdada 1%, #f7f2f2 50%, #dfdada 99%); /* IE10+ */
+	background: linear-gradient(to bottom, #dfdada 1%, #f7f2f2 50%, #dfdada 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f2f2', endColorstr='#dfdada',GradientType=0 ); /* IE6-9 */
 	
 }
 
@@ -298,7 +302,7 @@ hr
 	
 }
 
-.scroller ul 
+.scroller .list 
 {
 	/*position:absolute;*/
 	list-style:none;
@@ -314,7 +318,7 @@ hr
 	*/
 	
 
-	background-color: gray;
+	
 	
 	
 	
@@ -353,7 +357,7 @@ hr
 {
 	border-style: solid;
 	border-width:5px;
-	border-color:#b6cde9;
+	border-color:#b9b5b5;
 	
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -424,6 +428,7 @@ hr
 		float:none;
 		text-align:center;
 		margin-bottom:25px;
+		margin-left: 0px;
 	}
 
 	#cloud
