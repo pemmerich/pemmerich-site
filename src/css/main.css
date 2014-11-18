@@ -48,7 +48,7 @@ body, html
 	margin: 0;
 	padding: 0;
 	height:100%;
-	min-height:100%;
+	/*min-height:100%;*/
 	
 	font-family:Helvetica, Arial, sans-serif;
 	color:#000000;
@@ -82,10 +82,11 @@ body, html
 
 #header
 {
-	/*padding won't affect size of element'*/
+	/*padding won't affect size of element'
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
+	*/
 	
 	padding:10px;
 	display:block;
@@ -120,7 +121,7 @@ body, html
 
 	text-align:left;
 	margin-bottom:0px;
-	background-color: red;
+	/*background-color: red;*/
 	height:80px;
 	width:100px;
 }
@@ -135,11 +136,13 @@ body, html
 	font-size:.8em;
 	font-weight:bold;
 	display:inline;
-	position:relative;
+	position:absolute;
 	max-width:50%;
+	top:20px;
+	right:10px;
 	width:auto;
 	height:auto;
-	float:right;
+	/*float:right;*/
 	text-align:center;
 }
 
@@ -150,18 +153,23 @@ body, html
 
 #footer
 {
-	/*padding won't affect size of element'*/
+	/*padding won't affect size of element'
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
+	*/
 	
-	padding:10px;
+
 	
-	display:inline-block;
+	display:block;
 	width:100%;
 	height:auto;
 	min-height:100px;
 	overflow:hidden;
+
+	padding:10px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
 	
 	/*
 	background:#b8b8b8;
@@ -292,15 +300,21 @@ hr
 
 .scroller ul 
 {
-	position:absolute;
+	/*position:absolute;*/
 	list-style:none;
-	display:block;
+	display:inline-block;
 	width:100%;
 	/*height:350px;
 	top:50%;*/
-	padding:0;
-	/*margin:-225px 0px 0px 0px;*/
-	text-align:left;
+	
+	/*
+	text-align:center;
+	padding:auto;
+	margin:auto;
+	*/
+	
+
+	background-color: gray;
 	
 	
 	
@@ -315,8 +329,8 @@ hr
 	display:block;
 	vertical-align:middle;
 	float:left;
-	margin:0px 10px 0px 10px;
-	width:400px;
+	margin:40px 40px 40px 40px;
+	width:300px;
 	height:100%;
 
 	font-size:14px;
@@ -343,6 +357,7 @@ hr
 	
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	width: 300px;
 	
 	/*
 	-webkit-transform:rotateX(60deg) rotateZ(10deg);
@@ -419,7 +434,10 @@ hr
 		width:100%;
 		height:auto;
 		float:none;
+		position: relative;
 		text-align:center;
+		top:auto;
+		right:auto;
 	}
 	
 	

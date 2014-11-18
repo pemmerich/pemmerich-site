@@ -25,6 +25,7 @@ $(document).ready
 $(window).resize(function() {
 	var viewportWidth = $(window).width();
 	var viewportHeight = $(window).height();
+	setScrollerHeight();
 	console.log("Viewport Width = "+viewportWidth);
 	console.log("Viewport Height = "+viewportHeight);
 	//update survey container size
@@ -69,15 +70,10 @@ function init()
 		 
 	  });
 	
-	var thumbWidth = $('#content > .scroller li').css('width').replace("px","");
-	var thumbHeight = $('#content > .scroller li').css('height').replace("px","");
-	var thumbBorder = $('#content > .scroller li img').css('border-width').replace("px","");
-	var thumbMargin = $('#content > .scroller li').css('margin-right').replace("px","");
-	var scrollWidth = ($(thumbnails).length+1) * (Number(thumbWidth) + (thumbMargin*2) + (thumbBorder*2) );
-	var scrollHeight = ($(thumbnails).length+1) * (Number(thumbHeight) + (thumbMargin*2) + (thumbBorder*2) );
-	 $('#content > .scroller').css("height",scrollHeight);
-	 console.log("scroller width = "+scrollWidth);
-	 console.log("scroller height = "+scrollHeight);
+	
+	setScrollerHeight();
+	 
+	 
 	 
 	
 	thumb_scroll = new IScroll("#content",{mouseWheel:true,scrollbars:true});
@@ -110,4 +106,30 @@ function init()
 	);
 	
 	
+}
+
+function setScrollerHeight()
+{
+	var listHeight = $('#content > .scroller > .list').innerHeight();
+	var listWidth = $('#content > .scroller > .list').innerWidth();
+	var headerHeight = $('#header').innerHeight();
+	var footerHeight = $('#footer').innerHeight();
+
+	var thumbWidth = $('#content > .scroller li').css('width').replace("px","");
+	var thumbBorder = $('#content > .scroller li img').css('border-width').replace("px","");
+	var thumbMargin = $('#content > .scroller li').css('margin-right').replace("px","");
+	var thumbInnerWidth = Number(thumbWidth)+Number(thumbMargin*2)+Number(thumbBorder*2);
+	var numThumbs = Math.floor(listWidth/thumbInnerWidth);
+	var scrollWidth = numThumbs*thumbInnerWidth;
+	var bodyInnerWidth = $('body').innerWidth();
+	var paddingLeft = (bodyInnerWidth/2)-(scrollWidth/2);
+	 $('#content > .scroller > .list').css("padding-left",paddingLeft);
+
+	console.log("header height ="+headerHeight);
+	console.log("list height ="+listHeight);
+	console.log("footer height ="+footerHeight);
+	console.log("body width "+bodyInnerWidth+" scrollWidth "+scrollWidth+" num thumbs "+numThumbs+" thumb inner width "+thumbInnerWidth);
+
+		
+	 $('#content > .scroller').css("height",headerHeight+listHeight+footerHeight);
 }
