@@ -1,5 +1,6 @@
 var thumb_scroll;
 var thumbnails=[];
+var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 
 document.write("<script src='js/Thumbnail.js' type='text/javascript' charset='UTF-8'></script>");
 
@@ -65,21 +66,21 @@ function init()
 	$(thumbnails).each(function (i,elem) {
 		  //console.log(" build thumb "+i+" "+elem.title);
 		  $('#content > .scroller > .list').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></div></li>');
-		
+		//$('.list_test').append('<li><div class="thumb_container" id="thumb_container_'+i+'"><a href="'+elem.full_file+'" id=thumb_anchor_"'+i+'" title="'+elem.title+'"><img src="'+elem.thumb_file+'"></a></div></li>');
 		 
 		 
 	  });
 	
 	
 
-			setScrollerHeight();
+	setScrollerHeight();
 
 	
 	 
 	 
 	 
 	
-	thumb_scroll = new IScroll("#content",{mouseWheel:true,scrollbars:true});
+	thumb_scroll = new IScroll("#content",{mouseWheel:true,scrollbars:true,tap:'scrollTap'});
 	thumb_scroll.on('scrollStart', function () {
 		$('a').addClass('scrolling');
 	});
@@ -94,20 +95,27 @@ function init()
 	
 	console.log("light box = "+html5Lightbox);
 	
-	$('#content > .scroller li a').click(function(e) {
+	var evt;
+	if(isTouch){
+		evt = "scrollTap";
+	}else{
+		evt = "click";
+	}
+
+	$('#content > .scroller li a').on(evt, function(e) {
+    	console.log("a click lightbox = "+html5Lightbox);
 		
 		e.stopPropagation();
     	e.preventDefault();
-    	
-    	console.log("a click lightbox = "+html5Lightbox);
-    	
-    	
+
     	if(!$(this).hasClass('scrolling')){                  
 	    	html5Lightbox.showLightbox(0, $(this).attr('href'), $(this).attr('title'));
 	    }
-	}
-	);
-	
+		
+		
+	});
+
+
 	
 }
 
@@ -122,17 +130,24 @@ function setScrollerHeight()
 	var thumbWidth = $('#content > .scroller li').css('width').replace("px","");
 	var thumbBorder = $('#content > .scroller li img').css('border-width').replace("px","");
 	var thumbMargin = $('#content > .scroller li').css('margin-right').replace("px","");
-	var thumbInnerWidth = Number(thumbWidth)+Number(thumbMargin*2)+Number(thumbBorder*2);
-	var numThumbs = Math.floor(listWidth/thumbInnerWidth);
-	var scrollWidth = numThumbs*thumbInnerWidth;
+	var thumbInnerWidth = Number(thumbWidth)+Number(thumbMargin)+Number(thumbBorder*2);
+	var numThumbs = Math.floor((listWidth+Number(thumbMargin))/thumbInnerWidth);
+	var scrollWidth = (numThumbs*thumbInnerWidth)-Number(thumbMargin);
 	var bodyInnerWidth = $('body').innerWidth();
-	var paddingLeft = (bodyInnerWidth/2)-(scrollWidth/2);
-	 $('#content > .scroller > .list').css("padding-left",paddingLeft);
+	var marginLeft = (bodyInnerWidth/2)-(scrollWidth/2);
+	$('#content > .scroller > .list').css("margin-left",marginLeft);
 
-	console.log("header height ="+headerHeight);
-	console.log("list height ="+listHeight);
-	console.log("footer height ="+footerHeight);
+	console.log("num thumbs = "+numThumbs);
+	console.log("num thumbs floored = "+Math.floor(numThumbs));
+	console.log("header height = "+headerHeight);
+	console.log("list height = "+listHeight);
+	console.log("footer height = "+footerHeight);
+	console.log("thumb border = "+thumbBorder);
+	console.log("thumb margin = "+thumbMargin);
+	console.log("thumb width = "+thumbWidth);
+	console.log("list width = "+listWidth);
 	console.log("body width "+bodyInnerWidth+" scrollWidth "+scrollWidth+" num thumbs "+numThumbs+" thumb inner width "+thumbInnerWidth);
+	console.log("margin left = "+marginLeft);
 
 		
 	 $('#content > .scroller').css("height",headerHeight+listHeight+footerHeight);
