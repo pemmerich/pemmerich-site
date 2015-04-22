@@ -71,49 +71,47 @@ function init()
 		 
 	  });
 	
-	
-
 	setScrollerHeight();
 
-	
-	 
-	 
-	 
-	
-	thumb_scroll = new IScroll("#content",{mouseWheel:true,scrollbars:true,tap:'scrollTap'});
-	thumb_scroll.on('scrollStart', function () {
-		$('a').addClass('scrolling');
-	});
-	thumb_scroll.on('scrollEnd', function () {
-		setTimeout(function(){
-			$('a').removeClass('scrolling');
-		},500);
+	setTimeout(function(){
+		setScrollerHeight();
 		
-	});
+		thumb_scroll = new IScroll("#content",{mouseWheel:true,scrollbars:true,tap:'scrollTap'});
+		thumb_scroll.on('scrollStart', function () {
+			$('a').addClass('scrolling');
+		});
+		thumb_scroll.on('scrollEnd', function () {
+			setTimeout(function(){
+				$('a').removeClass('scrolling');
+			},10);
+			
+		});
 
-	$('body').append("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
-	
-	console.log("light box = "+html5Lightbox);
-	
-	var evt;
-	if(isTouch){
-		evt = "scrollTap";
-	}else{
-		evt = "click";
-	}
+		$('body').append("<script src='js/html5lightbox/html5lightbox.js' type='text/javascript' charset='UTF-8'></script>");
+		
+		console.log("light box = "+html5Lightbox);
+		
+		var evt;
+		if(isTouch){
+			evt = "scrollTap";
+		}else{
+			evt = "click";
+		}
 
-	$('#content > .scroller li a').on(evt, function(e) {
-    	console.log("a click lightbox = "+html5Lightbox);
-		
-		e.stopPropagation();
-    	e.preventDefault();
+		$('#content > .scroller li a').on(evt, function(e) {
+	    	console.log("a click lightbox = "+html5Lightbox);
+			
+			e.stopPropagation();
+	    	e.preventDefault();
 
-    	if(!$(this).hasClass('scrolling')){                  
-	    	html5Lightbox.showLightbox(0, $(this).attr('href'), $(this).attr('title'));
-	    }
-		
-		
-	});
+	    	if(!$(this).hasClass('scrolling')){                  
+		    	html5Lightbox.showLightbox(0, $(this).attr('href'), $(this).attr('title'));
+		    }
+			
+			
+		});
+	}, 500);
+	
 
 
 	
